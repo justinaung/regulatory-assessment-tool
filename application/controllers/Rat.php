@@ -10,7 +10,22 @@ class Rat extends CI_Controller {
 		$this->load->helper('url');
 	}
 
-	public function view($page='home')
+	public function home($page='home')
+	{
+		if(file_exists('application/views/rat/'.$page.'.php'))
+		{
+			$data['title']=ucfirst($page);
+			$this->load->view('templates/header', $data);
+			$this->load->view('rat/'.$page, $data);
+			$this->load->view('templates/footer', $data);
+		}
+		else
+		{
+			echo "Sorry, file does not exist";
+		}
+	}
+
+	public function result($page='result')
 	{
 		if(file_exists('application/views/rat/'.$page.'.php'))
 		{

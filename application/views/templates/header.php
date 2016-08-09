@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <meta charset="utf-8">
     <title> Regulatory Assessment Tool </title>
 
     <!--Load style.css file, which store in css folder.-->
