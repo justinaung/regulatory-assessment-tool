@@ -2,6 +2,8 @@
 <h2>Regulatory Assessment Tool</h2>
 <br>
 
+<?php echo form_open('index.php/rat/result'); ?>
+
 <form action="result" method="post">
     <table class="GeneratedTable">
         <thead>
@@ -47,3 +49,5 @@
 
     <input type="submit" name="submit" value="Submit">
 </form>
+
+<?php echo form_close(); ?>
