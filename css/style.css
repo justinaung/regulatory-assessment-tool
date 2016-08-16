@@ -1,4 +1,4 @@
-table.GeneratedTable {
+/*table.GeneratedTable {
     width:100%;
     background-color:#FFFFFF;
     border-collapse:collapse;border-width:1px;
@@ -16,4 +16,16 @@ table.GeneratedTable td, table.GeneratedTable th {
 
 table.GeneratedTable thead {
     background-color:#33CC33;
+}*/
+div.container {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.table1 {
+    width: 45%;
+    display: inline-block;
+}
+.table2 {
+    width: 45%;
+    display: inline-block;
 }
