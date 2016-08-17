@@ -39,22 +39,60 @@ class Rat extends CI_Controller {
 		}
 	}
 
+	private function calculateWhole($array, $multiplier)
+	{
+		$result = 0;
+		if (isset($array))
+		{
+			foreach ($array as $inner_array)
+			{
+				if (isset($inner_array))
+				{
+					foreach ($inner_array as $value)
+					{
+						$result += intval($value) * $multiplier;
+					}
+				}
+			}
+			return round($result);
+		}
+	}
+
 	public function result($page='result')
 	{
 		if(file_exists('application/views/rat/'.$page.'.php'))
 		{
 			$data['title']=ucfirst($page);
-			$data_array = $this->input->post('check_list');
 
-			$construction_result['con_result'] = $this->calculateResult($data_array, 6);
+			$construction_array = $this->input->post('check_list');
+			$collection_array = $this->input->post('check_list2');
+			$treatment_array = $this->input->post('check_list3');
+
+			$construction_array2 = $this->input->post('check_list4');
+			$collection_array2 = $this->input->post('check_list5');
+			$treatment_array2 = $this->input->post('check_list6');
+			$activites_array = $this->input->post('check_list7');
+			$affordability_array = $this->input->post('check_list8');
+			$priority_array = $this->input->post('check_list9');
+
+			$data_array = array( $construction_array, $collection_array, $treatment_array);
+			$data_array2 = array( $construction_array2, $collection_array2, $treatment_array2,
+									$activites_array, $affordability_array, $priority_array);
+			$whole_result1 = $this->calculateWhole($data_array, 3.225);
+			$whole_result2 = $this->calculateWhole($data_array2, 2.94);
+
+			$data_result['con_result'] = $this->calculateResult($construction_array, 6);
+			$data_result['col_result'] = $this->calculateResult($collection_array, 13);
+			$data_result['treat_result'] = $this->calculateResult($treatment_array, 11);
+			$data_result['whole_result'] = round( ($whole_result1 + $whole_result2) / 2 );
 
 			$this->load->view('templates/header', $data);
-			$this->load->view('rat/'.$page, $construction_result);
+			$this->load->view('rat/'.$page, $data_result);
 			$this->load->view('templates/footer', $data);
 		}
 		else
 		{
-			echo "Sorry, file does not exist";
+			echo "Sorry, file does not exist.";
 		}
 	}
 
