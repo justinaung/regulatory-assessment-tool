@@ -187,7 +187,7 @@
                     <td><input class="messageCheckbox" type="checkbox" value=1 name="check_list2[]"></td>
                 </tr>
                 <tr>
-                    <td>10</td>
+                    <td>11</td>
                     <td>
                         <a title="If there is trasfer station, the location should be clearly mentioned.">
                         Location of the transfer station
@@ -195,7 +195,7 @@
                     <td><input class="messageCheckbox" type="checkbox" value=1 name="check_list2[]"></td>
                 </tr>
                 <tr>
-                    <td>11</td>
+                    <td>12</td>
                     <td>
                         <a title="The manifest form also should be described in the regulation and in this form, Name and address of the applicant, Date and time of the collection, Source and amount of FS, the name and address of the collected organization, type and number of vehicle, and name and signature of the driver should be included.">
                         Manifest form
@@ -203,7 +203,7 @@
                     <td><input class="messageCheckbox" type="checkbox" value=1 name="check_list2[]"></td>
                 </tr>
                 <tr>
-                    <td>12</td>
+                    <td>13</td>
                     <td>
                         <a title="The information that will be monitored should be mentioned in the regulation.
                               The drivers must sign in the record information every route of collection with the time of leaving from the domain and entry time to the disposal and treatment site.
@@ -215,7 +215,7 @@
                     <td><input class="messageCheckbox" type="checkbox" value=1 name="check_list2[]"></td>
                 </tr>
                 <tr>
-                    <td>13</td>
+                    <td>14</td>
                     <td>
                         <a title="The penalty should be clearly defined for the unlicensed organizations, the unlicensed collection tucks, the illegal disposal and treatment, the licensed organizations that does not follow the regulations, the illegal dumping, the sanitation workers and the householders who encourage the illegal collection and disposal/treatment.">
                         Penal code for collection and transportation process
