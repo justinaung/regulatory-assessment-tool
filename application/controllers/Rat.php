@@ -1,9 +1,11 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Rat extends CI_Controller {
+class Rat extends CI_Controller
+{
 
-	function __construct() {
+	function __construct()
+	{
 		parent::__construct();
 
 		// Load url helper
@@ -96,7 +98,7 @@ class Rat extends CI_Controller {
 
 			$collection_result = $this->calculateResult($collection_array, 14);
 			$data_result['col_result'] = round( (($collection_result + $whole_col) / 2) );
-			echo "Collection: $collection_result";
+
 			$treatment_result = $this->calculateResult($treatment_array, 11);
 			$data_result['treat_result'] = round( (($treatment_result + $whole_treat) / 2) );
 
@@ -111,6 +113,4 @@ class Rat extends CI_Controller {
 			echo "Sorry, file does not exist.";
 		}
 	}
-
-
 }

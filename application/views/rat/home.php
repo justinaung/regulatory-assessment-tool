@@ -77,7 +77,7 @@
             <thead>
                 <tr>
                     <th>II</th>
-                    <th>Construction and transportation</th>
+                    <th>Collection & transportation</th>
                     <th></th>
                 </tr>
             </thead>
@@ -229,7 +229,7 @@
             <thead>
                 <tr>
                     <th>III</th>
-                    <th>Treatment and disposal/reuse</th>
+                    <th>Treatment & disposal/reuse</th>
                     <th></th>
                 </tr>
             </thead>
@@ -616,7 +616,7 @@
         </table>
         <br>
         <br>
-        <input type="submit" name="submit" value="Submit">
+        <input type="submit" name="submit" value="Assess">
     </div>
 
 </form>
