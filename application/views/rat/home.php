@@ -1,12 +1,8 @@
-<br><br>
-<h2>Regulatory Assessment Tool</h2>
-<br>
-
 <?php echo form_open('index.php/rat/result'); ?>
 
 <form action="result" method="post">
-    <div class="container">
-        <table border=1 class="table1">
+    <div class="tables_container">
+        <table border=1 class="table">
             <!--
                 Construction
             -->
@@ -28,9 +24,9 @@
                             </a>
                         </div>
                         </td>
-                    <td>
-                        <input class="messageCheckbox" type="checkbox" value=1 name="check_list[]">
-                    </td>
+                        <td>
+                            <input class="messageCheckbox" type="checkbox" value=1 name="check_list[]">
+                        </td>
                 </tr>
                 <tr>
                     <td>2</td>
@@ -326,7 +322,7 @@
         <!--
             Table 2
         -->
-        <table border=1 align="right" class="table2">
+        <table border=1 align="right" class="table">
             <!--
                 Construction
             -->
@@ -483,141 +479,149 @@
                     </td>
                     <td><input class="messageCheckbox" type="checkbox" value=1 name="check_list6[]"></td>
                 </tr>
-                <!--
-                    Other activities
-                -->
-                <thead>
-                    <th>IV</th>
-                    <th>Other activities (Awareness, Education, Management)</th>
-                    <th></th>
-                </thead>
-                <tr>
-                    <td>1</td>
-                    <td>
-                        To educate people about FSM and the current regulation by preparing IEC(Information, Education, & Communication) materials.
-                    </td>
-                    <td><input class="messageCheckbox" type="checkbox" value=1 name="check_list7[]"></td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>
-                        Enhancing the advertisement and announcement of FSM to increase the awareness of the people
-                    </td>
-                    <td><input class="messageCheckbox" type="checkbox" value=1 name="check_list7[]"></td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>
-                        Taking actions if there is anything differ from regulation and managing and collecting penalty, fee and charges
-                    </td>
-                    <td><input class="messageCheckbox" type="checkbox" value=1 name="check_list7[]"></td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>
-                        Managing the budget plan
-                    </td>
-                    <td><input class="messageCheckbox" type="checkbox" value=1 name="check_list7[]"></td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>
-                        Coordinating with other related professional organizations
-                    </td>
-                    <td><input class="messageCheckbox" type="checkbox" value=1 name="check_list7[]"></td>
-                </tr>
-                <tr>
-                    <td>6</td>
-                    <td>
-                        Updating the regulation and traffic setting according to the time and circumstance of a situation
-                    </td>
-                    <td><input class="messageCheckbox" type="checkbox" value=1 name="check_list7[]"></td>
-                </tr>
-                <tr>
-                    <td>7</td>
-                    <td>
-                        Managing the resource requirement within the specific areas
-                    </td>
-                    <td><input class="messageCheckbox" type="checkbox" value=1 name="check_list7[]"></td>
-                </tr>
-                <tr>
-                    <td>8</td>
-                    <td>
-                        Organizing the committee council and inspecting and monitoring the performance of the authorized organization in FSM
-                    </td>
-                    <td><input class="messageCheckbox" type="checkbox" value=1 name="check_list7[]"></td>
-                </tr>
-                <tr>
-                    <td>9</td>
-                    <td>
-                        Organizing the committee council and tring to encourage the participation of external experts to polish the national strategies, plans, policy and regulations
-                    </td>
-                    <td><input class="messageCheckbox" type="checkbox" value=1 name="check_list7[]"></td>
-                </tr>
-                <tr>
-                    <td>10</td>
-                    <td>
-                        Preparing regular training and education campaign for the stuff and local community
-                    </td>
-                    <td><input class="messageCheckbox" type="checkbox" value=1 name="check_list7[]"></td>
-                </tr>
-                <!--
-                    Affordability to pay
-                -->
-                <thead>
-                    <th>V</th>
-                    <th>Affordability to Pay</th>
-                    <th></th>
-                </thead>
-                <tr>
-                    <td>1</td>
-                    <td>
-                        The current service fee is not more than 5% of the average income of household.
-                    </td>
-                    <td><input class="messageCheckbox" type="checkbox" value=1 name="check_list8[]"></td>
-                </tr>
-                <!--
-                    Priority of FSM
-                -->
-                <thead>
-                    <th>VI</th>
-                    <th>Priority of FSM in selected area</th>
-                    <th></th>
-                </thead>
-                <tr>
-                    <td>1</td>
-                    <td>
-                        Policies
-                    </td>
-                    <td><input class="messageCheckbox" type="checkbox" value=1 name="check_list9[]"></td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>
-                        Strategies
-                    </td>
-                    <td><input class="messageCheckbox" type="checkbox" value=1 name="check_list9[]"></td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>
-                        Sector Development Plans
-                    </td>
-                    <td><input class="messageCheckbox" type="checkbox" value=1 name="check_list9[]"></td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>
-                        City-level/Municipal level regulations/ordinance
-                    </td>
-                    <td><input class="messageCheckbox" type="checkbox" value=1 name="check_list9[]"></td>
-                </tr>
+
             </tbody>
         </table>
-        <br>
-        <br>
-        <input type="submit" name="submit" value="Assess">
+        <br class="clearboth">
+        <br class="clearboth">
+        <hr>
+        <br class="clearboth">
+        <table border=1 class="table">
+            <!--
+                Other activities
+            -->
+            <thead>
+                <th>IV</th>
+                <th>Other activities (Awareness, Education, Management)</th>
+                <th></th>
+            </thead>
+            <tr>
+                <td>1</td>
+                <td>
+                    To educate people about FSM and the current regulation by preparing IEC(Information, Education, & Communication) materials.
+                </td>
+                <td><input class="messageCheckbox" type="checkbox" value=1 name="check_list7[]"></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>
+                    Enhancing the advertisement and announcement of FSM to increase the awareness of the people
+                </td>
+                <td><input class="messageCheckbox" type="checkbox" value=1 name="check_list7[]"></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>
+                    Taking actions if there is anything differ from regulation and managing and collecting penalty, fee and charges
+                </td>
+                <td><input class="messageCheckbox" type="checkbox" value=1 name="check_list7[]"></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>
+                    Managing the budget plan
+                </td>
+                <td><input class="messageCheckbox" type="checkbox" value=1 name="check_list7[]"></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>
+                    Coordinating with other related professional organizations
+                </td>
+                <td><input class="messageCheckbox" type="checkbox" value=1 name="check_list7[]"></td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>
+                    Updating the regulation and traffic setting according to the time and circumstance of a situation
+                </td>
+                <td><input class="messageCheckbox" type="checkbox" value=1 name="check_list7[]"></td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>
+                    Managing the resource requirement within the specific areas
+                </td>
+                <td><input class="messageCheckbox" type="checkbox" value=1 name="check_list7[]"></td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>
+                    Organizing the committee council and inspecting and monitoring the performance of the authorized organization in FSM
+                </td>
+                <td><input class="messageCheckbox" type="checkbox" value=1 name="check_list7[]"></td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>
+                    Organizing the committee council and tring to encourage the participation of external experts to polish the national strategies, plans, policy and regulations
+                </td>
+                <td><input class="messageCheckbox" type="checkbox" value=1 name="check_list7[]"></td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>
+                    Preparing regular training and education campaign for the stuff and local community
+                </td>
+                <td><input class="messageCheckbox" type="checkbox" value=1 name="check_list7[]"></td>
+            </tr>
+        </table>
+        <table border="1" class="table">
+            <!--
+                Affordability to pay
+            -->
+            <thead>
+                <th>V</th>
+                <th>Affordability to Pay</th>
+                <th></th>
+            </thead>
+            <tr>
+                <td>1</td>
+                <td>
+                    The current service fee is not more than 5% of the average income of household.
+                </td>
+                <td><input class="messageCheckbox" type="checkbox" value=1 name="check_list8[]"></td>
+            </tr>
+            <!--
+                Priority of FSM
+            -->
+            <thead>
+                <th>VI</th>
+                <th>Priority of FSM in selected area</th>
+                <th></th>
+            </thead>
+            <tr>
+                <td>1</td>
+                <td>
+                    Policies
+                </td>
+                <td><input class="messageCheckbox" type="checkbox" value=1 name="check_list9[]"></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>
+                    Strategies
+                </td>
+                <td><input class="messageCheckbox" type="checkbox" value=1 name="check_list9[]"></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>
+                    Sector Development Plans
+                </td>
+                <td><input class="messageCheckbox" type="checkbox" value=1 name="check_list9[]"></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>
+                    City-level/Municipal level regulations/ordinance
+                </td>
+                <td><input class="messageCheckbox" type="checkbox" value=1 name="check_list9[]"></td>
+            </tr>
+        </table>
     </div>
-
+    <br class="clearboth">
+    <br>
+    <input type="submit" class="btn btn-info" value="Assess">
 </form>
 <?php echo form_close(); ?>
