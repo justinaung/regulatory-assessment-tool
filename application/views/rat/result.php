@@ -1,7 +1,3 @@
-<br><br>
-<h2>Results</h2>
-<br>
-
 <script type='text/javascript' src="<?php echo base_url(); ?>js/canvasjs.min.js"></script>
 
 <script type="text/javascript">
@@ -9,6 +5,11 @@
 	var collection_data = <?php echo json_encode($col_result); ?>;
 	var treatment_data = <?php echo json_encode($treat_result); ?>;
 	var whole_data = <?php echo json_encode($whole_result); ?>;
+
+	var construction_color = getColor(construction_data);
+	var collection_color = getColor(collection_data);
+	var treatment_color = getColor(treatment_data);
+	var whole_color = getColor(whole_data);
 
 	window.onload = function ()
 	{
@@ -29,15 +30,37 @@
 					type: "bar",
 					dataPoints:
 					[
-						{ label: "Overall",  y: whole_data },
-						{ label: "Construction",  y: construction_data },
-						{ label: "Collection",  y: collection_data },
-						{ label: "Treatment",  y: treatment_data }
+						{ label: "Overall", y: whole_data, color: whole_color },
+
+						{ label: "Construction",  y: construction_data,
+				 		  color: construction_color },
+
+						{ label: "Collection",  y: collection_data,
+				 		  color: collection_color },
+
+						{ label: "Treatment",  y: treatment_data,
+				 		  color: treatment_color }
 					]
 				}
 			]
 		});
 		chart.render();
+	}
+
+	function getColor(data)
+	{
+		if (data >=0 && data <= 50)
+		{
+			return "#E74C3C";
+		}
+		else if (data > 50 && data <= 80)
+		{
+			return "#F5B041";
+		}
+		else if (data > 80 && data <= 100)
+		{
+			return "#5499C7";
+		}
 	}
 
 	function goBack()
@@ -79,26 +102,9 @@
 
 </style>
 
-<body>
-	<button onclick="printChart()">Print Chart</button>
-	<div id="section-to-print">
-		<div id="chartContainer" style="height: 300px; width: 70%;"></div>
-	</div>
-	<br>
-	<button onclick="goBack()">Go Back</button>
-</body>
-
-<!--
-<div class="test">
-Testing
-<div id="section-to-print">
-
- <div class="text-primary">
-	Test Tesing Testing
- </div>
- <h1 style="color:green;">Print me</h1>
- <img src="https://encrypted-tbn2.gstatic.com/images?       q=tbn:ANd9GcTxGnSWBjZPbzj6IUq0IgEO1vqT4QFpcfejmHWRWDnLV862lvz-"/>
+<div align="center" id="section-to-print">
+	<div id="chartContainer" style="height: 300px; width: 70%;"></div>
 </div>
-</div>
-<button onclick="printDiv()">
-Print</button> -->
+<br class="clearboth">
+<button class="btn btn-default" onclick="goBack()">Go Back</button>
+<button class="btn btn-default" onclick="printChart()">Print Chart</button>
