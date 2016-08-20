@@ -1,6 +1,13 @@
-<?php echo form_open('index.php/rat/result'); ?>
+<?php
+    echo form_open('index.php/rat/result');
+    echo "Records from construction";
 
-<form action="result" method="post">
+    foreach ($records as $rec) {
+        echo $rec->attribute."   ".$rec->checked."<br/>";
+    }
+?>
+
+<form method="post">
     <div class="tables_container">
         <table border=1 class="table">
             <!--
@@ -25,6 +32,7 @@
                         </div>
                         </td>
                         <td>
+                            <input class="messageCheckbox" type="hidden" value="Permit application for construction toilet facilities" name="check_list[]">
                             <input class="messageCheckbox" type="checkbox" value=1 name="check_list[]">
                         </td>
                 </tr>
@@ -33,17 +41,26 @@
                     <td>
                         Building codes for the toilet facilities
                     </td>
-                    <td><input class="messageCheckbox" type="checkbox" value=1 name="check_list[]"></td>
+                    <td>
+                        <input class="messageCheckbox" type="hidden" value="Building codes for the toilet facilities" name="check_list[]">
+                        <input class="messageCheckbox" type="checkbox" value=1 name="check_list[]">
+                    </td>
                 </tr>
                 <tr>
                     <td>3</td>
                     <td>Building codes for the drainage facilities</td>
-                    <td><input class="messageCheckbox" type="checkbox" value=1 name="check_list[]"></td>
+                    <td>
+                        <input class="messageCheckbox" type="hidden" value="Building codes for the drainage facilities" name="check_list[]">
+                        <input class="messageCheckbox" type="checkbox" value=1 name="check_list[]">
+                    </td>
                 </tr>
                 <tr>
                     <td>4</td>
                     <td>Maintainance of the drainage facilities</td>
-                    <td><input class="messageCheckbox" type="checkbox" value=1 name="check_list[]"></td>
+                    <td>
+                        <input class="messageCheckbox" type="hidden" value="Maintainance of the drainage facilities" name="check_list[]">
+                        <input class="messageCheckbox" type="checkbox" value=1 name="check_list[]">
+                    </td>
                 </tr>
                 <tr>
                     <td>5</td>
@@ -52,7 +69,10 @@
                                 Inspection and certification
                         </a>
                     </td>
-                    <td><input class="messageCheckbox" type="checkbox" value=1 name="check_list[]"></td>
+                    <td>
+                        <input class="messageCheckbox" type="hidden" value="Inspection and certification" name="check_list[]">
+                        <input class="messageCheckbox" type="checkbox" value=1 name="check_list[]">
+                    </td>
                 </tr>
                 <tr>
                     <td>6</td>
@@ -64,7 +84,10 @@
                                     Pernal code and fee for the construction process
                         </a>
                     </td>
-                    <td><input class="messageCheckbox" type="checkbox" value=1 name="check_list[]"></td>
+                    <td>
+                        <input class="messageCheckbox" type="hidden" value="Pernal code and fee for the construction process" name="check_list[]">
+                        <input class="messageCheckbox" type="checkbox" value=1 name="check_list[]">
+                    </td>
                 </tr>
             </tbody>
             <!--
@@ -89,17 +112,21 @@
                             </a>
                         </td>
                     <td>
-                        <input class="messageCheckbox" type="checkbox" value=1 name="check_list2[]">
+                        <input class="messageCheckbox" type="hidden" value="Collection application for service / Periodic collection from service providers" name="check_list[]">
+                        <input class="messageCheckbox" type="checkbox" value=1 name="check_list[]">
                     </td>
                 </tr>
                 <tr>
                     <td>2</td>
                     <td>
                         <a title="It should keep a robust database of all owners/administrators of buildings, facilities and structures who have desludged their septic tanks, those that are inaccessible, those that do not have septic tanks, and those that do not have water sealed toilets, and other data that may be deemed necessary.">
-                        Robust database (for accessibility of the service)
+                        Robust database (for accessibility of the service
                         </a>
                     </td>
-                    <td><input class="messageCheckbox" type="checkbox" value=1 name="check_list2[]"></td>
+                    <td>
+                        <input class="messageCheckbox" type="hidden" value="Robust database (for accessibility of the service" name="check_list[]">
+                        <input class="messageCheckbox" type="checkbox" value=1 name="check_list[]">
+                    </td>
                 </tr>
                 <tr>
                     <td>3</td>
@@ -624,4 +651,13 @@
     <br>
     <input type="submit" class="btn btn-info" value="Assess">
 </form>
+<script type="text/javascript">
+    // if (document.getElementByName("check").checked) {
+    // document.getElementById("checkHidden").disabled = false;
+    // }
+    $("input:checkbox[name=checklist[]]:checked").each(functionJ())
+    {
+
+    }
+</script>
 <?php echo form_close(); ?>

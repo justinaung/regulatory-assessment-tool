@@ -1,5 +1,7 @@
 <script type='text/javascript' src="<?php echo base_url(); ?>js/canvasjs.min.js"></script>
-
+<?php
+	var_dump($_POST);
+?>
 <script type="text/javascript">
 	var construction_data = <?php echo json_encode($con_result); ?>;
 	var collection_data = <?php echo json_encode($col_result); ?>;
