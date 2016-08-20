@@ -18,7 +18,7 @@ class Rat extends CI_Controller
 		{
 			$this->load->model('ConstructionModel');
 			$data['records'] = $this->ConstructionModel->getData();
-			
+
 			$data['title']=ucfirst($page);
 			$this->load->view('templates/header', $data);
 			$this->load->view('rat/'.$page, $data);

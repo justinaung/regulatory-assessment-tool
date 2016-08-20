@@ -75,7 +75,6 @@
 		window.print();
 	}
 
-
 </script>
 
 <style>
