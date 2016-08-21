@@ -20,6 +20,12 @@ class Rat extends CI_Controller
 			$data['construction_records'] = $this->CheckListModel->getConstructionList();
 			$data['collection_records'] = $this->CheckListModel->getCollectionList();
 			$data['treatment_records'] = $this->CheckListModel->getTreatmentList();
+			$data['construction_act_records'] = $this->CheckListModel->getConstructionActivitiesList();
+			$data['collection_act_records'] = $this->CheckListModel->getCollectionActivitiesList();
+			$data['treatment_act_records'] = $this->CheckListModel->getTreatmentActivitiesList();
+			$data['other_act_records'] = $this->CheckListModel->getOtherActivitiesList();
+			$data['affortability_records'] = $this->CheckListModel->getAffordabilityList();
+			$data['priority_records'] = $this->CheckListModel->getPriorityActivitiesList();
 
 			$data['title']=ucfirst($page);
 			$this->load->view('templates/header', $data);
