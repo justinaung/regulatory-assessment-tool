@@ -3,6 +3,7 @@
 <form method="post">
     <div class="tables_container">
         <table border=1 class="table">
+        <caption><h4><b>Criteria on Regulation</b></h4></caption>
         <?php
             echo "<thead>";
                 echo "<tr>";
@@ -67,7 +68,8 @@
             echo "</tbody>";
         ?>
         </table>
-        <table border=1 class="table">
+        <table border=1 class="table" id="right_table">
+        <caption><h4><b>Activities, Enforcement, Institutional Relation</b></h4></caption>
         <?php
             echo "<thead>";
                 echo "<tr>";
@@ -159,7 +161,7 @@
             echo "</tbody>";
         ?>
         </table>
-        <table border="1" class="table">
+        <table border="1" class="table" id="right_table">
         <?php
             echo "<thead>";
                 echo "<tr>";
@@ -210,23 +212,3 @@
 </form>
 
 <?php echo form_close(); ?>
-<script type="text/javascript">
-    // if (document.getElementByName("check").checked) {
-    // document.getElementById("checkHidden").disabled = false;
-    // }
-    // $("input:checkbox[name=checklist[]]:checked").each(functionJ())
-    // {
-    //
-    // }
-    // $('input[type="checkbox"]').on('change', function(e))
-    // {
-    //     if($(this).prop('checked'))
-    //     {
-    //         $(this).next().val(1);
-    //     }
-    //     else
-    //     {
-    //
-    //     }
-    // }
-</script>
