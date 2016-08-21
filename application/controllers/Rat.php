@@ -16,8 +16,10 @@ class Rat extends CI_Controller
 	{
 		if(file_exists('application/views/rat/'.$page.'.php'))
 		{
-			$this->load->model('ConstructionModel');
-			$data['records'] = $this->ConstructionModel->getData();
+			$this->load->model('CheckListModel');
+			$data['construction_records'] = $this->CheckListModel->getConstructionList();
+			$data['collection_records'] = $this->CheckListModel->getCollectionList();
+			$data['treatment_records'] = $this->CheckListModel->getTreatmentList();
 
 			$data['title']=ucfirst($page);
 			$this->load->view('templates/header', $data);
@@ -69,7 +71,7 @@ class Rat extends CI_Controller
 		{
 			$data['title']=ucfirst($page);
 
-			$construction_array = $this->input->post('check_list');
+			$construction_array = $this->input->post('check_list1');
 			$collection_array = $this->input->post('check_list2');
 			$treatment_array = $this->input->post('check_list3');
 
