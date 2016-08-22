@@ -2,12 +2,15 @@
 
     <div class="tables_container">
         <table border=1 class="table">
-        <caption><h4><b>Criteria on Regulation</b></h4></caption>
+        <caption>
+            <h5><b>Criteria on Regulation</b></span>
+            </h5><h6>for FSM service chain</h6>
+        </caption>
         <?php
             echo "<thead>";
                 echo "<tr>";
                     echo "<th>I</th>";
-                    echo "<th>Construction</th>";
+                    echo "<th>Construction</th  >";
                     echo "<th></th>";
                 echo "</tr>";
             echo "</thead>";
@@ -68,7 +71,7 @@
         ?>
         </table>
         <table border=1 class="table" id="right_table">
-        <caption><h4><b>Activities, Enforcement, Institutional Relation</b></h4></caption>
+        <caption><h5><b>Implementation Activities</b></h5><h6>(Enforcement, Institutional relation, resources plan activites)</h6></caption>
         <?php
             echo "<thead>";
                 echo "<tr>";
@@ -138,6 +141,7 @@
         <hr>
         <br class="clearboth">
         <table border="1" class="table">
+        <caption><h5><b>Implementation Activities (Continued...)</b></h5></caption>
         <?php
             echo "<thead>";
                 echo "<tr>";
@@ -161,6 +165,7 @@
         ?>
         </table>
         <table border="1" class="table" id="right_table">
+        <caption><h5><b>Implementation Activities (Continued...)</b></h5></caption>
         <?php
             echo "<thead>";
                 echo "<tr>";
