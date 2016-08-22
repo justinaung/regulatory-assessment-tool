@@ -98,7 +98,7 @@ class Rat extends CI_Controller
 			$construction_array = $this->input->post('check_list1');
 			$collection_array = $this->input->post('check_list2');
 			$treatment_array = $this->input->post('check_list3');
-			var_dump(count($collection_array));
+
 			$data_result['missed_construction_array'] = $this->getMissingValues($construction_array);
 			$data_result['missed_collection_array'] = $this->getMissingValues($collection_array);
 			$data_result['missed_treatment_array'] = $this->getMissingValues($treatment_array);
