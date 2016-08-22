@@ -6,17 +6,28 @@ div.tables_container
 }
 .table
 {
-    width: 45%;
-    float: left;
-    margin: 0 15px 15px 0;
+  width: 45%;
+  float: left;
+  margin: 10px 15px 15px 15px;
 }
 .table a
 {
-    text-decoration: none;
+  text-decoration: none;
+}
+#right_table
+{
+  width: 45%;
+  float: right;
+}
+.table_result
+{
+  width: 45%;
+  float: left;
+  margin: 0 15px 15px 0;
 }
 .clearboth
 {
-    clear: both;
+  clear: both;
 }
 /*#footer
 {
