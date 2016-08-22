@@ -96,6 +96,7 @@ class Rat extends CI_Controller
 			$data['title']=ucfirst($page);
 
 			$construction_array = $this->input->post('check_list1');
+			var_dump($construction_array);
 			$collection_array = $this->input->post('check_list2');
 			$treatment_array = $this->input->post('check_list3');
 
