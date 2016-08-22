@@ -1,6 +1,5 @@
-<?php echo form_open('index.php/rat/result'); ?>
+<?php echo form_open('rat/result'); ?>
 
-<form method="post">
     <div class="tables_container">
         <table border=1 class="table">
         <caption><h4><b>Criteria on Regulation</b></h4></caption>
@@ -209,6 +208,5 @@
     <br class="clearboth">
     <br>
     <input type="submit" class="btn btn-info" value="Assess">
-</form>
 
 <?php echo form_close(); ?>
