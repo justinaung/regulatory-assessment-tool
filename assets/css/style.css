@@ -1,0 +1,218 @@
+#footer
+{
+    clear: both;
+    margin: 0;
+    color: #333;
+    background-color: #ddd;
+    border-top: 1px solid gray;
+}
+.clearboth
+{
+  clear: both;
+}
+.ui-tooltip
+{
+  white-space: pre-line;
+}
+#logoImage
+{
+  width: 150px;
+  height: 150px;
+}
+label {
+  padding-left: 15px;
+  text-indent: -15px;
+}
+div.tables_container
+{
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 5px;
+}
+.table_result
+{
+  width: 45%;
+  float: left;
+  margin: 0 15px 15px 0;
+}
+.table_result thead
+{
+  color: white;
+  background-color: rgb(51, 187, 155);
+}
+.table a
+{
+  text-decoration: none;
+}
+#table-header
+{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: bold;
+  color: white;
+  background-color: rgb(51, 187, 155);
+  margin-left: 4px;
+  margin-right: 4px;
+}
+#printButton
+{
+  margin-left: 5px;j
+}
+#poor_ind
+{
+  background-color: #E74C3C;
+}
+#mod_ind
+{
+  background-color: #F5B041;
+}
+#sat_ind
+{
+  background-color: #5499C7;
+}
+/*--------------------------------------------------*/
+/*| Functioning Table
+/*--------------------------------------------------*/
+table.datatable.table {
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  border-collapse: collapse;
+}
+table.datatable.table label {
+  margin: 0;
+  font-weight: normal;
+}
+table.datatable.table tr {
+  margin: 0;
+  padding: 0;
+}
+table.datatable.table tr th {
+  text-align: center;
+  vertical-align: middle;
+  color: white;
+  background-color: rgb(51, 187, 155);
+}
+table.datatable.table tr td {
+  margin: 0;
+  padding: 0;
+  vertical-align: text-top;
+}
+table.datatable.table tr td:first-child {
+  padding: 5px;
+}
+table.datatable.table table.table {
+  margin: 0;
+  border: 0;
+}
+table.datatable.table table.table tr:first-child td,
+table.datatable.table table.table tr:first-child th {
+  border-top: 0;
+}
+table.datatable.table table.table tr:last-child td table tr:last-child td {
+  border-bottom: 0;
+}
+table.datatable.table table.table td:first-child,
+table.datatable.table table.table th:first-child {
+  border-left: 0;
+}
+table.datatable.table table.table td:last-child,
+table.datatable.table table.table th:last-child {
+  border-right: 0;
+}
+table.datatable.table table.activitiesCarriedOutTable tr:last-child td {
+  border-bottom: 0;
+}
+/*--------------------------------------------------*/
+/*| Helper Classes
+/*--------------------------------------------------*/
+.width100 {
+  width: 100%;
+}
+.width90 {
+  width: 90%;
+}
+.width80 {
+  width: 80%;
+}
+.width78 {
+  width: 78%;
+}
+.width70 {
+  width: 70%;
+}
+.width60 {
+  width: 60%;
+}
+.width50 {
+  width: 50%;
+}
+.width45 {
+  width: 45%;
+}
+.width40 {
+  width: 40%;
+}
+.width39 {
+  width: 39%;
+}
+.width35 {
+  width: 35%;
+}
+.width30 {
+  width: 30%;
+}
+.width26 {
+  width: 26%;
+}
+.width25 {
+  width: 25%;
+}
+.width23 {
+  width: 23.3%;
+}
+.width22 {
+  width: 22.2%;
+}
+.width20 {
+  width: 20%;
+}
+.width19 {
+  width: 19.5%;
+}
+.width17 {
+  width: 17.5%;
+}
+.width15Half {
+  width: 15.6%;
+}
+.width15 {
+  width: 15%;
+}
+.width14 {
+  width: 14%;
+}
+.width13 {
+  width: 13%;
+}
+.width11 {
+  width: 11.6%;
+}
+.width10 {
+  width: 10%;
+}
+.width9 {
+  width: 9%;
+}
+.width5 {
+  width: 5%;
+}
+.alignCenter {
+  text-align: center;
+}
+.floatLeft {
+  float: left;
+}
+.floatRight {
+  float: right;
+}
