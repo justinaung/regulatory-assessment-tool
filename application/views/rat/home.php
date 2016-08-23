@@ -1,5 +1,11 @@
 <?php echo form_open('rat/result'); ?>
-
+    <div id="country_input" class="row">
+        Country
+        <input class="style-1" type="text" name="country" placeholder="Country"><br>
+        City/Municipality
+        <input type="text" name="city" placeholder="City"><br>
+    </div>
+    <br>
     <div class="container-fluid">
         <div class="row">
             <div class="col-xs-12">
@@ -14,7 +20,7 @@
                     <tbody>
                         <tr>
                             <td class="alignCenter width10">
-                                Construction/Containment
+                                Construction/Containment<br>
                                 <img id="logoImage" src="<?php echo base_url(); ?>assets/image/construction.png">
                             </td>
                             <td class="width45">
@@ -54,7 +60,7 @@
                         </tr>
                         <tr>
                             <td class="alignCenter width10">
-                                Collection & Treatment
+                                Collection & Treatment<br>
                                 <img id="logoImage" src="<?php echo base_url(); ?>assets/image/collection.jpg">
                             </td>
                             <td class="width45">
@@ -94,7 +100,7 @@
                         </tr>
                         <tr>
                             <td class="alignCenter width10">
-                                Treatment/Disposal/Reuse
+                                Treatment/Disposal/Reuse<br>
                                 <img id="logoImage" src="<?php echo base_url(); ?>assets/image/treatment.jpg">
                             </td>
                             <td class="width45">
@@ -137,7 +143,7 @@
             </div>
         </div>
         <br>
-        <div id="table-header" class="row">
+        <div id="table_header" class="row">
             <div class="col-xs-12 alignCenter">
                 <div id="table-head-text">
                     Implementation Activities (Continuing...)<br>
@@ -151,7 +157,7 @@
                     <tbody>
                         <tr>
                             <td class="alignCenter width10">
-                                Other activities (Awareness, Education, Management)
+                                Other activities (Awareness, Education, Management)<br>
                                 <img id="logoImage" src="<?php echo base_url(); ?>assets/image/activities.jpg">
                             </td>
                             <td class="width40">
@@ -183,7 +189,7 @@
                         <tbody>
                             <tr>
                                 <td class="alignCenter width10">
-                                    Affordability to Pay
+                                    Affordability to Pay<br>
                                     <img id="logoImage" src="<?php echo base_url(); ?>assets/image/affordability.jpg">
                                 </td>
                                 <td class="width40">
@@ -213,7 +219,7 @@
                         <tbody>
                             <tr>
                                 <td class="alignCenter width10">
-                                    Priority
+                                    Priority<br>
                                     <img id="logoImage" src="<?php echo base_url(); ?>assets/image/priority.jpg">
                                 </td>
                                 <td class="width40">
