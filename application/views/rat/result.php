@@ -107,6 +107,7 @@
 	{
 		visibility: hidden;
 	}
+
 	#section-to-print-chart, #section-to-print-chart *,
 	#section-to-print-data, #section-to-print-data *
 	{
@@ -114,7 +115,7 @@
 	}
 	#section-to-print-chart
 	{
-		position: absolute;
+		position: absolute;;
 		left: 0;
 		top: 0;
 	}
