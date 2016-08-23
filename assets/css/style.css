@@ -39,5 +39,17 @@ label {
 }
 #printButton
 {
-  margin-left: 5px;
+  margin-left: 5px;j
+}
+#poor_ind
+{
+  background-color: #E74C3C;
+}
+#mod_ind
+{
+  background-color: #F5B041;
+}
+#sat_ind
+{
+  background-color: #5499C7;
 }

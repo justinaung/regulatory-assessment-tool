@@ -25,7 +25,7 @@
 			},
 			axisY:
 			{
-				title: "Poor(Red) <= 50 | 50 < Moderate(Yellow) <= 80 | Satisfactory(Blue) > 80",
+				title: "Poor <= 50 | 50 < Moderate <= 80 | Satisfactory > 80",
 				titleFontSize: 15,
 				maximum: 100
 			},
@@ -135,6 +135,9 @@
 	<div id="chartContainer" style="height: 300px; width: 70%;"></div>
 </div>
 <br class="clearboth">
+<div class="row" align="center">
+	<label id="poor_ind"> Poor&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><label id="mod_ind" > Moderate&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><label id="sat_ind"> Satisfactory&nbsp;&nbsp;&nbsp;</label>
+</div>
 <button class="btn btn-default" onclick="goBack()">Go Back</button>
 <button id="printButton" class="btn btn-info" style="float: left;" onclick="printChart()">Print Result</button>
 <br class="clearboth">
