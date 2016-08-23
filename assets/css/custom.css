@@ -439,6 +439,9 @@ table.datatable.table tr {
 }
 table.datatable.table tr th {
   text-align: center;
+  vertical-align: middle;
+  color: white;
+  background-color: rgb(51, 187, 155);
 }
 table.datatable.table tr td {
   margin: 0;

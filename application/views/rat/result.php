@@ -136,143 +136,178 @@
 </div>
 <br class="clearboth">
 <button class="btn btn-default" onclick="goBack()">Go Back</button>
-<button class="btn btn-default" onclick="printChart()">Print</button>
+<button id="printButton" class="btn btn-info" style="float: left;" onclick="printChart()">Print Result</button>
 <br class="clearboth">
 <hr>
 <br/>
 <div id="section-to-print-data">
-	<div class="tables_container">
-		<table border=1 class="table_result">
-			<thead>
-				<tr>
-					<th>Construction/ Containment</th>
-				</tr>
-			</thead>
-			<tbody>
-				<?php
-					foreach ($missed_construction_array as $value)
-					{ ?>
+	<div class="contain-fluid">
+		<h4 align="center"> Missing Criteria </h4><br>
+		<div class="row">
+			<div class="col-xs-12">
+				<table border=1 class="datatable table table-condensed table-bordered">
+					<thead>
 						<tr>
-							<?php
-								echo "<td> - ".$value."</td>";
-							?>
+							<th>Construction/ Containment</th>
+							<th>Collection & Transportation</th>
 						</tr>
-				<?php } ?>
-				<?php
-					foreach ($missed_con2_array as $value)
-					{ ?>
+					</thead>
+					<tbody>
 						<tr>
-							<?php
-								echo "<td> - ".$value."</td>";
-							?>
+							<td class="width50">
+								<table class="datatable table table-condensed">
+                                    <tbody>
+										<?php
+											foreach ($missed_construction_array as $value)
+											{ ?>
+												<tr>
+													<?php
+														echo "<td> - ".$value."</td>";
+													?>
+												</tr>
+										<?php } ?>
+										<?php
+											foreach ($missed_con2_array as $value)
+											{ ?>
+												<tr>
+													<?php
+														echo "<td> - ".$value."</td>";
+													?>
+												</tr>
+										<?php } ?>
+									</tbody>
+								</table>
+							</td>
+							<td class="width50">
+								<table class="datatable table table-condensed">
+                                    <tbody>
+										<?php
+								            foreach ($missed_collection_array as $value)
+								            { ?>
+								                <tr>
+								                    <?php
+								                        echo "<td> - ".$value."</td>";
+								                    ?>
+								                </tr>
+								        <?php } ?>
+								        <?php
+								            foreach ($missed_col2_array as $value)
+								            { ?>
+								                <tr>
+								                    <?php
+								                        echo "<td> - ".$value."</td>";
+								                    ?>
+								                </tr>
+								        <?php } ?>
+									</tbody>
+								</table>
+							</td>
 						</tr>
-				<?php } ?>
-			</tbody>
-		</table>
-		<table border=1 class="table_result" id="right_table">
-			<thead>
-				<tr>
-					<th> Collection & Transportation </th>
-				</tr>
-			</thead>
-			<tbody>
-				<?php
-					foreach ($missed_collection_array as $value)
-					{ ?>
+					</tbody>
+				</table>
+			</div>
+	 	</div>
+		<div class="row">
+			<div class="col-xs-12">
+				<table border=1 class="datatable table table-condensed table-bordered">
+					<thead>
 						<tr>
-							<?php
-								echo "<td> - ".$value."</td>";
-							?>
+							<th>Treatment/Disposal/Reuse</th>
+							<th>Other Activities(Awareness, Education, Management)</th>
 						</tr>
-				<?php } ?>
-				<?php
-					foreach ($missed_col2_array as $value)
-					{ ?>
+					</thead>
+					<tbody>
 						<tr>
-							<?php
-								echo "<td> - ".$value."</td>";
-							?>
+							<td class="width50">
+								<table class="datatable table table-condensed">
+                                    <tbody>
+										<?php
+								            foreach ($missed_treatment_array as $value)
+								            { ?>
+								                <tr>
+								                    <?php
+								                        echo "<td> - ".$value."</td>";
+								                    ?>
+								                </tr>
+								        <?php } ?>
+								        <?php
+								            foreach ($missed_treat2_array as $value)
+								            { ?>
+								                <tr>
+								                    <?php
+								                        echo "<td> - ".$value."</td>";
+								                    ?>
+								                </tr>
+								        <?php } ?>
+									</tbody>
+								</table>
+							</td>
+							<td class="width50">
+								<table class="datatable table table-condensed">
+                                    <tbody>
+										<?php
+								            foreach ($missed_act_array as $value)
+								            { ?>
+								                <tr>
+								                    <?php
+								                        echo "<td> - ".$value."</td>";
+								                    ?>
+								                </tr>
+								        <?php } ?>
+									</tbody>
+								</table>
+							</td>
 						</tr>
-				<?php } ?>
-			</tbody>
-		</table>
-		<table border=1 class="table_result">
-			<thead>
-				<tr>
-					<th> Treatment/ Disposa/ Reuse </th>
-				</tr>
-			</thead>
-			<tbody>
-				<?php
-					foreach ($missed_treatment_array as $value)
-					{ ?>
+					</tbody>
+				</table>
+			</div>
+	 	</div>
+		<div class="row">
+			<div class="col-xs-12">
+				<table border=1 class="datatable table table-condensed table-bordered">
+					<thead>
 						<tr>
-							<?php
-								echo "<td> - ".$value."</td>";
-							?>
+							<th>Affordability to Pay</th>
+							<th>Priority</th>
 						</tr>
-				<?php } ?>
-				<?php
-					foreach ($missed_treat2_array as $value)
-					{ ?>
+					</thead>
+					<tbody>
 						<tr>
-							<?php
-								echo "<td> - ".$value."</td>";
-							?>
+							<td class="width50">
+								<table class="datatable table table-condensed">
+                                    <tbody>
+										<?php
+								            foreach ($missed_aff_array as $value)
+								            { ?>
+								                <tr>
+								                    <?php
+								                        echo "<td> - ".$value."</td>";
+								                    ?>
+								                </tr>
+								        <?php } ?>
+									</tbody>
+								</table>
+							</td>
+							<td class="width50">
+								<table class="datatable table table-condensed">
+                                    <tbody>
+										<?php
+								            foreach ($missed_prio_array as $value)
+								            { ?>
+								                <tr>
+								                    <?php
+								                        echo "<td> - ".$value."</td>";
+								                    ?>
+								                </tr>
+								        <?php } ?>
+									</tbody>
+								</table>
+							</td>
 						</tr>
-				<?php } ?>
-			</tbody>
-		</table>
-		<table border=1 class="table_result" id="right_table">
-			<thead>
-				<tr>
-					<th> Other activites </th>
-				</tr>
-			</thead>
-			<tbody>
-				<?php
-					foreach ($missed_act_array as $value)
-					{ ?>
-						<tr>
-							<?php
-								echo "<td> - ".$value."</td>";
-							?>
-						</tr>
-				<?php } ?>
-			</tbody>
-			<thead>
-				<tr>
-					<th> Affortability </th>
-				</tr>
-			</thead>
-			<tbody>
-				<?php
-					foreach ($missed_aff_array as $value)
-					{ ?>
-						<tr>
-							<?php
-								echo "<td> - ".$value."</td>";
-							?>
-						</tr>
-				<?php } ?>
-			</tbody>
-			<thead>
-				<tr>
-					<th> Priority </th>
-				</tr>
-			</thead>
-			<tbody>
-				<?php
-					foreach ($missed_prio_array as $value)
-					{ ?>
-						<tr>
-							<?php
-								echo "<td> - ".$value."</td>";
-							?>
-						</tr>
-				<?php } ?>
-			</tbody>
-		</table>
+					</tbody>
+				</table>
+			</div>
+	 	</div>
 	</div>
 </div>
 <br class="clearboth">

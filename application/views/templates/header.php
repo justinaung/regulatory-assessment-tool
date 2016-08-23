@@ -25,20 +25,16 @@
     <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
 
-    <!-- Custom CSS-->
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/general.css">
-
     <!-- Owl-Carousel -->
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/custom.css">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/owl.carousel.css">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/owl.theme.css">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/animate.css">
 
-    <!-- Magnific Popup core CSS file -->
-    <!-- <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/magnific-popup.css"> -->
-
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
 
+    <!-- Custom CSS-->
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/general.css">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/style.css">
 
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
@@ -50,13 +46,8 @@
            });
         } );
     </script>
-    <style>
-    label {
-      display: inline-block;
-      width: 5em;
-    }
-    </style>
+
 </head>
 
 <body>
-    <h1 align="center"> Regulation Effectiveness Assessment Tool </h1><hr>
+    <h1 align="center"> <img id="logoImage" src="<?php echo base_url(); ?>assets/image/mainlogo.jpg"> Regulation Effectiveness Assessment Tool </h1><hr>
