@@ -96,7 +96,6 @@
 	{
 		window.print();
 	}
-
 </script>
 
 <style>
@@ -134,7 +133,7 @@
 </style>
 
 <div id="section-to-print-chart">
-	<div align="right" class="country_output">
+	<div align="right" class="location_output">
 		Country - <?php echo $country; ?><br/>
 		City/Municipality - <?php echo $city; ?>
 	</div>

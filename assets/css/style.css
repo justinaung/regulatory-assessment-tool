@@ -12,8 +12,10 @@ table.datatable.table {
 }
 table.datatable.table label {
   margin: 0;
+  padding: 5px;
+  display: block;
   font-weight: normal;
-  padding-left: 15px;
+  padding-left: 25px;
   text-indent: -15px;
 }
 table.datatable.table tr {
@@ -37,24 +39,6 @@ table.datatable.table tr td:first-child {
 table.datatable.table table.table {
   margin: 0;
   border: 0;
-}
-table.datatable.table table.table tr:first-child td,
-table.datatable.table table.table tr:first-child th {
-  border-top: 0;
-}
-table.datatable.table table.table tr:last-child td table tr:last-child td {
-  border-bottom: 0;
-}
-table.datatable.table table.table td:first-child,
-table.datatable.table table.table th:first-child {
-  border-left: 0;
-}
-table.datatable.table table.table td:last-child,
-table.datatable.table table.table th:last-child {
-  border-right: 0;
-}
-table.datatable.table table.activitiesCarriedOutTable tr:last-child td {
-  border-bottom: 0;
 }
 #table_header
 {
@@ -181,9 +165,11 @@ table.datatable.table table.activitiesCarriedOutTable tr:last-child td {
 /*--------------------------------------------------*/
 /*| tootltip
 /*--------------------------------------------------*/
-.ui-tooltip
+div.ui-tooltip
 {
   white-space: pre-line;
+  max-width: 100%;
+  width: 30%;
 }
 /*--------------------------------------------------*/
 /*| icon
@@ -223,17 +209,28 @@ label {
 /*--------------------------------------------------*/
 /*| country / city
 /*--------------------------------------------------*/
-#country_input
+#location_input
 {
   margin-left: 15px;
 }
-
-.country_output
+.location_output
 {
   margin-right: 50px;
 }
+/*--------------------------------------------------*/
+/*| hr
+/*--------------------------------------------------*/
+hr
+{
+  background-color: rgb(51, 187, 155); !important;
+  color: rgb(51, 187, 155) !important;
+  height: 7px !important;
+}
+/*--------------------------------------------------*/
+/*| input text
+/*--------------------------------------------------*/
 input[type="text"] {
-  display: block;
+  display: inline-block;
   padding: 10px;
   border: solid 1px #fff;
   box-shadow: inset 1px 1px 2px 0 #707070;
@@ -241,16 +238,4 @@ input[type="text"] {
 }
 input[type="text"]:focus {
   box-shadow: inset 1px 1px 2px 0 #c9c9c9;
-}
-/*--------------------------------------------------*/
-/*| hr
-/*--------------------------------------------------*/
-hr
-{
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid rgb(51, 187, 155);
-    margin: 1em 0;
-    padding: 0;
 }

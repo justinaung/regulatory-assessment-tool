@@ -1,19 +1,20 @@
 <?php echo form_open('rat/result'); ?>
-    <div id="country_input" class="row">
+    <div id="location_input" class="row">
         Country
-        <input class="style-1" type="text" name="country" placeholder="Country"><br>
+        <input class="style-1" type="text" name="country" placeholder="Country">&nbsp;&nbsp;&nbsp;
+
         City/Municipality
         <input type="text" name="city" placeholder="City"><br>
     </div>
-    <br>
+    <br class="clearboth">
     <div class="container-fluid">
         <div class="row">
             <div class="col-xs-12">
                 <table class="datatable table table-condensed table-bordered">
                     <thead>
                         <tr>
-                            <th > FSM chain </th>
-                            <th > Regulation on Paper </th>
+                            <th > FSM service chain </th>
+                            <th > Regulation criteria for FSM service chain </th>
                             <th > Implementation Activities<br> (Monitoring, Enforcement, Institutional Relation, Resources Plan) </th>
                         </tr>
                     </thead>
@@ -26,18 +27,14 @@
                             <td class="width45">
                                 <table class="datatable table table-condensed">
                                     <tbody>
+                                        <?php foreach ($construction_records as $rec) { ?>
                                         <tr>
-                                            <?php foreach ($construction_records as $rec) { ?>
-                                            <tr>
-                                                <td>
-                                                    <label>
-                                                        <input type="hidden" value=<?php echo "\"$rec->attribute\""; ?>name=<?php echo "\"check_list1[".$rec->id."]\""; ?> >
-                                                        <input type="checkbox" value=1 name=<?php echo "\"check_list1[".$rec->id."]\""; ?> > <a title=<?php echo "\"$rec->description\""; ?> > <?php echo $rec->attribute; ?></a>
-                                                    </label>
-                                                </td>
-                                            </tr>
-                                            <?php } ?>
-                                        <tr>
+                                            <label>
+                                                <input type="hidden" value=<?php echo "\"$rec->attribute\""; ?>name=<?php echo "\"check_list1[".$rec->id."]\""; ?> >
+                                                <input type="checkbox" value=1 name=<?php echo "\"check_list1[".$rec->id."]\""; ?> > <a title=<?php echo "\"$rec->description\""; ?> > <?php echo $rec->attribute; ?></a>
+                                            </label>
+                                        </tr>
+                                        <?php } ?>
                                     </tbody>
                                 </table>
                             </td>
@@ -46,12 +43,10 @@
                                     <tbody>
                                         <?php foreach ($construction_act_records as $rec) { ?>
                                         <tr>
-                                            <td>
-                                                <label>
-                                                    <input type="hidden" value=<?php echo "\"$rec->attribute\""; ?>name=<?php echo "\"check_list4[".$rec->id."]\""; ?> >
-                                                    <input type="checkbox" value=1 name=<?php echo "\"check_list4[".$rec->id."]\""; ?> > <a title=<?php echo "\"$rec->description\""; ?> > <?php echo $rec->attribute; ?></a>
-                                                </label>
-                                            </td>
+                                            <label>
+                                                <input type="hidden" value=<?php echo "\"$rec->attribute\""; ?>name=<?php echo "\"check_list4[".$rec->id."]\""; ?> >
+                                                <input type="checkbox" value=1 name=<?php echo "\"check_list4[".$rec->id."]\""; ?> > <a title=<?php echo "\"$rec->description\""; ?> > <?php echo $rec->attribute; ?></a>
+                                            </label>
                                         </tr>
                                         <?php } ?>
                                     </tbody>
@@ -66,17 +61,14 @@
                             <td class="width45">
                                 <table class="datatable table table-condensed">
                                     <tbody>
+                                        <?php foreach ($collection_records as $rec) { ?>
                                         <tr>
-                                            <?php foreach ($collection_records as $rec) { ?>
-                                            <tr>
-                                                <td>
-                                                    <label>
-                                                        <input type="hidden" value=<?php echo "\"$rec->attribute\""; ?>name=<?php echo "\"check_list2[".$rec->id."]\""; ?> >
-                                                        <input type="checkbox" value=1 name=<?php echo "\"check_list2[".$rec->id."]\""; ?> > <a title=<?php echo "\"$rec->description\""; ?> > <?php echo $rec->attribute; ?></a>
-                                                    </label>
-                                                </td>
-                                            </tr>
-                                            <?php } ?>
+                                            <label>
+                                                <input type="hidden" value=<?php echo "\"$rec->attribute\""; ?>name=<?php echo "\"check_list2[".$rec->id."]\""; ?> >
+                                                <input type="checkbox" value=1 name=<?php echo "\"check_list2[".$rec->id."]\""; ?> > <a title=<?php echo "\"$rec->description\""; ?> > <?php echo $rec->attribute; ?></a>
+                                            </label>
+                                        </tr>
+                                        <?php } ?>
                                         <tr>
                                     </tbody>
                                 </table>
@@ -86,12 +78,10 @@
                                     <tbody>
                                         <?php foreach ($collection_act_records as $rec) { ?>
                                         <tr>
-                                            <td>
-                                                <label>
-                                                    <input type="hidden" value=<?php echo "\"$rec->attribute\""; ?>name=<?php echo "\"check_list5[".$rec->id."]\""; ?> >
-                                                    <input type="checkbox" value=1 name=<?php echo "\"check_list5[".$rec->id."]\""; ?> > <a title=<?php echo "\"$rec->description\""; ?> > <?php echo $rec->attribute; ?></a>
-                                                </label>
-                                            </td>
+                                            <label>
+                                                <input type="hidden" value=<?php echo "\"$rec->attribute\""; ?>name=<?php echo "\"check_list5[".$rec->id."]\""; ?> >
+                                                <input type="checkbox" value=1 name=<?php echo "\"check_list5[".$rec->id."]\""; ?> > <a title=<?php echo "\"$rec->description\""; ?> > <?php echo $rec->attribute; ?></a>
+                                            </label>
                                         </tr>
                                         <?php } ?>
                                     </tbody>
@@ -106,18 +96,14 @@
                             <td class="width45">
                                 <table class="datatable table table-condensed">
                                     <tbody>
+                                        <?php foreach ($treatment_records as $rec) { ?>
                                         <tr>
-                                            <?php foreach ($treatment_records as $rec) { ?>
-                                            <tr>
-                                                <td>
-                                                    <label>
-                                                        <input type="hidden" value=<?php echo "\"$rec->attribute\""; ?>name=<?php echo "\"check_list3[".$rec->id."]\""; ?> >
-                                                        <input type="checkbox" value=1 name=<?php echo "\"check_list3[".$rec->id."]\""; ?> > <a title=<?php echo "\"$rec->description\""; ?> > <?php echo $rec->attribute; ?></a>
-                                                    </label>
-                                                </td>
-                                            </tr>
-                                            <?php } ?>
-                                        <tr>
+                                            <label>
+                                                <input type="hidden" value=<?php echo "\"$rec->attribute\""; ?>name=<?php echo "\"check_list3[".$rec->id."]\""; ?> >
+                                                <input type="checkbox" value=1 name=<?php echo "\"check_list3[".$rec->id."]\""; ?> > <a title=<?php echo "\"$rec->description\""; ?> > <?php echo $rec->attribute; ?></a>
+                                            </label>
+                                        </tr>
+                                        <?php } ?>
                                     </tbody>
                                 </table>
                             </td>
@@ -126,12 +112,10 @@
                                     <tbody>
                                         <?php foreach ($treatment_act_records as $rec) { ?>
                                         <tr>
-                                            <td>
-                                                <label>
-                                                    <input type="hidden" value=<?php echo "\"$rec->attribute\""; ?>name=<?php echo "\"check_list6[".$rec->id."]\""; ?> >
-                                                    <input type="checkbox" value=1 name=<?php echo "\"check_list6[".$rec->id."]\""; ?> > <a title=<?php echo "\"$rec->description\""; ?> > <?php echo $rec->attribute; ?></a>
-                                                </label>
-                                            </td>
+                                            <label>
+                                                <input type="hidden" value=<?php echo "\"$rec->attribute\""; ?>name=<?php echo "\"check_list6[".$rec->id."]\""; ?> >
+                                                <input type="checkbox" value=1 name=<?php echo "\"check_list6[".$rec->id."]\""; ?> > <a title=<?php echo "\"$rec->description\""; ?> > <?php echo $rec->attribute; ?></a>
+                                            </label>
                                         </tr>
                                         <?php } ?>
                                     </tbody>
@@ -163,18 +147,14 @@
                             <td class="width40">
                                 <table class="datatable table table-condensed">
                                     <tbody>
+                                        <?php foreach ($other_act_records as $rec) { ?>
                                         <tr>
-                                            <?php foreach ($other_act_records as $rec) { ?>
-                                            <tr>
-                                                <td>
-                                                    <label>
-                                                        <input type="hidden" value=<?php echo "\"$rec->attribute\""; ?>name=<?php echo "\"check_list7[".$rec->id."]\""; ?> >
-                                                        <input type="checkbox" value=1 name=<?php echo "\"check_list7[".$rec->id."]\""; ?> > <a title=<?php echo "\"$rec->description\""; ?> > <?php echo $rec->attribute; ?></a>
-                                                    </label>
-                                                </td>
-                                            </tr>
-                                            <?php } ?>
+                                            <label>
+                                                <input type="hidden" value=<?php echo "\"$rec->attribute\""; ?>name=<?php echo "\"check_list7[".$rec->id."]\""; ?> >
+                                                <input type="checkbox" value=1 name=<?php echo "\"check_list7[".$rec->id."]\""; ?> > <a title=<?php echo "\"$rec->description\""; ?> > <?php echo $rec->attribute; ?></a>
+                                            </label>
                                         </tr>
+                                        <?php } ?>
                                     </tbody>
                                 </table>
                             </td>
@@ -182,7 +162,6 @@
                     </tbody>
                 </table>
             </div>
-
             <div class="col-xs-6">
                 <div class="row">
                     <table class="datatable table table-condensed table-bordered">
@@ -195,18 +174,14 @@
                                 <td class="width40">
                                     <table class="datatable table table-condensed">
                                         <tbody>
+                                            <?php foreach ($affortability_records as $rec) { ?>
                                             <tr>
-                                                <?php foreach ($affortability_records as $rec) { ?>
-                                                <tr>
-                                                    <td>
-                                                        <label>
-                                                            <input type="hidden" value=<?php echo "\"$rec->attribute\""; ?>name=<?php echo "\"check_list8[".$rec->id."]\""; ?> >
-                                                            <input type="checkbox" value=1 name=<?php echo "\"check_list8[".$rec->id."]\""; ?> > <a title=<?php echo "\"$rec->description\""; ?> > <?php echo $rec->attribute; ?></a>
-                                                        </label>
-                                                    </td>
-                                                </tr>
-                                                <?php } ?>
+                                                <label>
+                                                    <input type="hidden" value=<?php echo "\"$rec->attribute\""; ?>name=<?php echo "\"check_list8[".$rec->id."]\""; ?> >
+                                                    <input type="checkbox" value=1 name=<?php echo "\"check_list8[".$rec->id."]\""; ?> > <a title=<?php echo "\"$rec->description\""; ?> > <?php echo $rec->attribute; ?></a>
+                                                </label>
                                             </tr>
+                                            <?php } ?>
                                         </tbody>
                                     </table>
                                 </td>
@@ -225,18 +200,14 @@
                                 <td class="width40">
                                     <table class="datatable table table-condensed">
                                         <tbody>
+                                            <?php foreach ($priority_records as $rec) { ?>
                                             <tr>
-                                                <?php foreach ($priority_records as $rec) { ?>
-                                                <tr>
-                                                    <td>
-                                                        <label>
-                                                            <input type="hidden" value=<?php echo "\"   $rec->attribute\""; ?>name=<?php echo "\"check_list9[".$rec->id."]\""; ?> >
-                                                            <input type="checkbox" value=1 name=<?php echo "\"check_list9[".$rec->id."]\""; ?> > <a title=<?php echo "\"$rec->description\""; ?> > <?php echo $rec->attribute; ?></a>
-                                                        </label>
-                                                    </td>
-                                                </tr>
-                                                <?php } ?>
+                                                <label>
+                                                    <input type="hidden" value=<?php echo "\"   $rec->attribute\""; ?>name=<?php echo "\"check_list9[".$rec->id."]\""; ?> >
+                                                    <input type="checkbox" value=1 name=<?php echo "\"check_list9[".$rec->id."]\""; ?> > <a title=<?php echo "\"$rec->description\""; ?> > <?php echo $rec->attribute; ?></a>
+                                                </label>
                                             </tr>
+                                            <?php } ?>
                                         </tbody>
                                     </table>
                                 </td>
