@@ -96,7 +96,6 @@
 	{
 		window.print();
 	}
-
 </script>
 
 <style>
@@ -132,8 +131,15 @@
   font-size:40px;
 }
 </style>
-<div align="center" id="section-to-print-chart">
-	<div id="chartContainer" style="height: 300px; width: 70%;"></div>
+
+<div id="section-to-print-chart">
+	<div align="right" class="location_output">
+		Country - <?php echo $country; ?><br/>
+		City/Municipality - <?php echo $city; ?>
+	</div>
+	<div align="center">
+		<div id="chartContainer" style="height: 300px; width: 70%;"></div>
+	</div>
 </div>
 <br class="clearboth">
 <div class="row" align="center">

@@ -95,6 +95,9 @@ class Rat extends CI_Controller
 		{
 			$data['title']=ucfirst($page);
 
+			$data_result['country'] = $this->input->post('country');
+			$data_result['city'] = $this->input->post('city');
+
 			$construction_array = $this->input->post('check_list1');
 			$collection_array = $this->input->post('check_list2');
 			$treatment_array = $this->input->post('check_list3');

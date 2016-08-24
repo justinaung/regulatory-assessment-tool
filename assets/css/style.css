@@ -1,78 +1,9 @@
-#footer
-{
-    clear: both;
-    margin: 0;
-    color: #333;
-    background-color: #ddd;
-    border-top: 1px solid gray;
-}
-.clearboth
-{
-  clear: both;
-}
-.ui-tooltip
-{
-  white-space: pre-line;
-}
-#logoImage
-{
-  width: 150px;
-  height: 150px;
-}
-label {
-  padding-left: 15px;
-  text-indent: -15px;
-}
-div.tables_container
-{
-    margin-left: 50px;
-    margin-right: 50px;
-    padding: 5px;
-}
-.table_result
-{
-  width: 45%;
-  float: left;
-  margin: 0 15px 15px 0;
-}
-.table_result thead
-{
-  color: white;
-  background-color: rgb(51, 187, 155);
-}
-.table a
-{
-  text-decoration: none;
-}
-#table-header
-{
-  padding-top: 10px;
-  padding-bottom: 10px;
-  font-weight: bold;
-  color: white;
-  background-color: rgb(51, 187, 155);
-  margin-left: 4px;
-  margin-right: 4px;
-}
-#printButton
-{
-  margin-left: 5px;j
-}
-#poor_ind
-{
-  background-color: #E74C3C;
-}
-#mod_ind
-{
-  background-color: #F5B041;
-}
-#sat_ind
-{
-  background-color: #5499C7;
-}
 /*--------------------------------------------------*/
 /*| Functioning Table
 /*--------------------------------------------------*/
+.table a {
+  text-decoration: none;
+}
 table.datatable.table {
   margin: 0;
   padding: 0;
@@ -81,7 +12,11 @@ table.datatable.table {
 }
 table.datatable.table label {
   margin: 0;
+  padding: 5px;
+  display: block;
   font-weight: normal;
+  padding-left: 25px;
+  text-indent: -15px;
 }
 table.datatable.table tr {
   margin: 0;
@@ -105,24 +40,17 @@ table.datatable.table table.table {
   margin: 0;
   border: 0;
 }
-table.datatable.table table.table tr:first-child td,
-table.datatable.table table.table tr:first-child th {
-  border-top: 0;
+#table_header
+{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: bold;
+  color: white;
+  background-color: rgb(51, 187, 155);
+  margin-left: 4px;
+  margin-right: 4px;
 }
-table.datatable.table table.table tr:last-child td table tr:last-child td {
-  border-bottom: 0;
-}
-table.datatable.table table.table td:first-child,
-table.datatable.table table.table th:first-child {
-  border-left: 0;
-}
-table.datatable.table table.table td:last-child,
-table.datatable.table table.table th:last-child {
-  border-right: 0;
-}
-table.datatable.table table.activitiesCarriedOutTable tr:last-child td {
-  border-bottom: 0;
-}
+
 /*--------------------------------------------------*/
 /*| Helper Classes
 /*--------------------------------------------------*/
@@ -215,4 +143,99 @@ table.datatable.table table.activitiesCarriedOutTable tr:last-child td {
 }
 .floatRight {
   float: right;
+}
+/*--------------------------------------------------*/
+/*| Footer
+/*--------------------------------------------------*/
+#footer
+{
+    clear: both;
+    margin: 0;
+    color: #333;
+    background-color: rgb(51, 187, 155);
+    border-top: 1px solid gray;
+}
+/*--------------------------------------------------*/
+/*| use for break
+/*--------------------------------------------------*/
+.clearboth
+{
+  clear: both;
+}
+/*--------------------------------------------------*/
+/*| tootltip
+/*--------------------------------------------------*/
+div.ui-tooltip
+{
+  white-space: pre-line;
+  max-width: 100%;
+  width: 30%;
+}
+/*--------------------------------------------------*/
+/*| icon
+/*--------------------------------------------------*/
+#logoImage
+{
+  width: 150px;
+  height: 150px;
+}
+/*--------------------------------------------------*/
+/*| label
+/*--------------------------------------------------*/
+label {
+  padding-left: 15px;
+  text-indent: -15px;
+}
+
+#printButton
+{
+  margin-left: 5px;
+}
+/*--------------------------------------------------*/
+/*| color bar of result chart
+/*--------------------------------------------------*/
+#poor_ind
+{
+  background-color: #E74C3C;
+}
+#mod_ind
+{
+  background-color: #F5B041;
+}
+#sat_ind
+{
+  background-color: #5499C7;
+}
+/*--------------------------------------------------*/
+/*| country / city
+/*--------------------------------------------------*/
+#location_input
+{
+  margin-left: 15px;
+}
+.location_output
+{
+  margin-right: 50px;
+}
+/*--------------------------------------------------*/
+/*| hr
+/*--------------------------------------------------*/
+hr
+{
+  background-color: rgb(51, 187, 155); !important;
+  color: rgb(51, 187, 155) !important;
+  height: 7px !important;
+}
+/*--------------------------------------------------*/
+/*| input text
+/*--------------------------------------------------*/
+input[type="text"] {
+  display: inline-block;
+  padding: 10px;
+  border: solid 1px #fff;
+  box-shadow: inset 1px 1px 2px 0 #707070;
+  transition: box-shadow 0.3s;
+}
+input[type="text"]:focus {
+  box-shadow: inset 1px 1px 2px 0 #c9c9c9;
 }
