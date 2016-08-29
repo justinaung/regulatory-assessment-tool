@@ -38,12 +38,12 @@ class Rat extends CI_Controller
 		}
 	}
 
-	private function calculateResult($array, $crit_num)
+	private function calculateResult($array)
 	{
 		$result = 0;
 		if (isset($array))
 		{
-			$multiplier = 100 / $crit_num;
+			$multiplier = 100 / count($array);
 			foreach ($array as $value)
 			{
 				$result += intval($value) * $multiplier;
@@ -68,11 +68,25 @@ class Rat extends CI_Controller
 		return $missing_array;
 	}
 
-	private function calculateWholeResult($array, $multiplier)
+	private function countNestedArray($array)
 	{
-		$result = 0;
 		if (isset($array))
 		{
+			$total = count($array, COUNT_RECURSIVE);
+			$total -= count($array);
+			return $total;
+		}
+	}
+
+	private function calculateWholeResult($array)
+	{
+		$result = 0;
+
+		if (isset($array))
+		{
+			$total_criteria = $this->countNestedArray($array);
+			$multiplier = 100 / $total_criteria;
+
 			foreach ($array as $inner_array)
 			{
 				if (isset($inner_array))
@@ -81,12 +95,10 @@ class Rat extends CI_Controller
 					{
 						$result += intval($value) * $multiplier;
 					}
-
 				}
 			}
 			return round($result);
 		}
-
 	}
 
 	public function result($page='result')
@@ -130,19 +142,20 @@ class Rat extends CI_Controller
 			$data_array_treatment = array( $treatment_array2, $activities_array,
 										   $affordability_array, $priority_array);
 
-			$whole_result1 = $this->calculateWholeResult($data_whole1, 3.225);
-			$whole_result2 = $this->calculateWholeResult($data_whole2, 2.94);
-			$whole_con = $this->calculateWholeResult($data_array_construction, 5);
-			$whole_col = $this->calculateWholeResult($data_array_collection, 4.35);
-			$whole_treat = $this->calculateWholeResult($data_array_treatment, 4.76);
+		    $data_whole1_count = $this->countNestedArray($data_whole1);
+			$whole_result1 = $this->calculateWholeResult($data_whole1);
+			$whole_result2 = $this->calculateWholeResult($data_whole2);
+			$whole_con = $this->calculateWholeResult($data_array_construction);
+			$whole_col = $this->calculateWholeResult($data_array_collection);
+			$whole_treat = $this->calculateWholeResult($data_array_treatment);
 
-			$construction_result = $this->calculateResult($construction_array, 6);
+			$construction_result = $this->calculateResult($construction_array);
 			$data_result['con_result'] = round( (($construction_result + $whole_con) / 2) );
 
-			$collection_result = $this->calculateResult($collection_array, 14);
+			$collection_result = $this->calculateResult($collection_array);
 			$data_result['col_result'] = round( (($collection_result + $whole_col) / 2) );
 
-			$treatment_result = $this->calculateResult($treatment_array, 11);
+			$treatment_result = $this->calculateResult($treatment_array);
 			$data_result['treat_result'] = round( (($treatment_result + $whole_treat) / 2) );
 
 			$data_result['whole_result'] = round( (($whole_result1 + $whole_result2) / 2) );
